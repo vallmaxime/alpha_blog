@@ -1,1 +1,6 @@
 <h1><%= @article.title %></h1>
+
+<p><%= @article.description %></p>
+
+<%= link_to "Retour à la liste", articles_path %> |
+<%= link_to "Editer l’article", edit_article_path(@article) %>
