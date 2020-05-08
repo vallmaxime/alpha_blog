@@ -15,7 +15,7 @@ before_action :set_article, only: [:edit, :update, :show, :destroy]
   def create
     @article = Article.new(article_params)
     if @article.save
-      flash[:notice] = "artcile bien créé"
+      flash[:success] = "artcile bien créé"
   	   redirect_to article_path(@article)
     else
   	   render "new"
@@ -25,20 +25,19 @@ before_action :set_article, only: [:edit, :update, :show, :destroy]
 
 def update
     if @article.update(article_params)
-      flash[:notice] = "artcile bien modifié"
+      flash[:success] = "artcile bien modifié"
   	  redirect_to articles_path(@article)
     else
   	  render "edit"
     end
 end
 
-
   def show
   end
 
 	def destroy
      @article.destroy
-		 flash[:notice] = "Article supprimé"
+		 flash[:danger] = "Article supprimé"
      redirect_to articles_path
 	 end
 
