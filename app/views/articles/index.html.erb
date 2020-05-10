@@ -4,27 +4,6 @@
       <p>
         <%= link_to "Créer un nouvel artcile", new_article_path %><br><br>
       </p>
-      <table class="table">
-        <thead>
-           <tr>
-          	<th>Titre</th>
-          	<th>Description</th>
-            <th>Inforations</th>
-            <th>Action</th>
-           </tr
-        </thead>
-
-
-           <% @articles.each do |article| %>
-      	    <tr>
-              <td><%= link_to article.title, article_path(article) %></td>
-              <td><%= truncate(article.description, length: 30) %></td>
-              <td><small>Created by <strong><%= article.user.username if article.user %></strong> <%= time_ago_in_words(article.created_at) %> ago,
-                updated <%= time_ago_in_words(article.created_at) %> ago</small></td>
-              <td><%= link_to "Editer", edit_article_path(article), class: "btn btn-xs btn-primary" %></td>
-              <td><%= link_to "Supprimer", article_path(article), method: :delete, class: "btn btn-xs btn-danger" %></td>
-             </tr>
-           <%  end %>
-      </table>
+      <%= rendr 'articles' %>
     </div>
 </div>
