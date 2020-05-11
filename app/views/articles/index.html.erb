@@ -4,6 +4,6 @@
       <p>
         <%= link_to "Créer un nouvel artcile", new_article_path %><br><br>
       </p>
-      <%= rendr 'articles' %>
+      <%= render 'articles', obj: @articles %>
     </div>
 </div>
