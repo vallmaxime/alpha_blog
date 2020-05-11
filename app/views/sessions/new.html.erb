@@ -2,10 +2,10 @@
 
 <div class="row center">
   <div class="col-sm-offset-2">
-    <%= form_for(:sesssion, :html => {class: "form-horizontal", role: "form"}, url: login_path) do |f| %>
+    <%= form_for(:session, :html => {class: "form-horizontal", role: "form"}, url: login_path) do |f| %>
     <div class="form-group">
         <div class="col-sm-2 control-label">
-          <%= f.label :username %>
+          <%= f.label :email %>
         </div>
         <div class="col-sm-6">
           <%= f.text_field :email, class: "form-control", placeholder: "Votre email" %>
