@@ -2,8 +2,11 @@
 
 <div class="row">
     <div class="col-xs-8 col-xs-offset-2">
+      <div class="center">
+        <%= will_paginate @users %>
+      </div>
       <ul class="List-group">
-        <% @user.each do |user| %>
+        <% @users.each do |user| %>
           <div class="panel panel-default">
             <div class="panel-heading">
               <h3 class="panel-title"><% user.username %></h3>
@@ -16,5 +19,8 @@
           </div>
         <% end %>
       </ul>
+      <div align="center">
+        <%= will_paginate @users %>
+      </div>
     </div>
 </div

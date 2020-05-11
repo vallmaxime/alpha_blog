@@ -1,9 +1,15 @@
 <div class="row">
     <div class="col-xs-8 col-xs-offset-2">
-    <h1>Listing de mes articles !</h1>
-      <p>
-        <%= link_to "Créer un nouvel artcile", new_article_path %><br><br>
-      </p>
-      <%= render 'articles', obj: @articles %>
+      <h1>Listing de mes articles !</h1>
+        <p>
+          <%= link_to "Créer un nouvel artcile", new_article_path %><br><br>
+        </p>
+        <div align="center">
+          <%= will_paginate @articles %>
+        </div>
+          <%= render 'articles', obj: @articles %>
+        <div align="center">
+          <%= will_paginate @articles %>
+        </div>
     </div>
 </div>
