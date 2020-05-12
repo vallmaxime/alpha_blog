@@ -40,7 +40,7 @@ class UsersController < ApplicationController
 
     def destroy
         @user.destroy
-        flash[:success] = "Utilisateur et tous ses articles supprimés avec succès mon pote"
+        flash[:success] = "Utilisateur et tous ses articles supprimés avec succès !"
         redirect_to users_path
     end
 
@@ -56,14 +56,14 @@ class UsersController < ApplicationController
 
     def require_same_user
         if current_user != @user and current_user.admin? == false
-           flash[:danger] = "Ooh la garçon ! Tu te crois ou la !?"
+           flash[:danger] = "Ooh la oh la ! Tu ne peut pas faire ca!"
            redirect_to root_path
         end
     end
 
     def require_admin
         if logged_in? and current_user.admin? == false
-           flash[:danger] = "Action impossible si t'es pas admin ma gueule"
+           flash[:danger] = "Action impossible si tu n'es pas admin "
            redirect_to users_path
         end
     end
