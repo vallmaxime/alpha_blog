@@ -55,11 +55,10 @@ end
   end
 
 	def require_save_user
-		if current_user != @article.user
+		if current_user != @article.user and current_user.admin? == false
 			flash[:danger] = 	"Hé ho hé ho hé ho la !! Frero tu peut pas faire ca, c'est pas ton article ! Nan mais dit donc "
 			redirect_to root_path
 		end
 	end
-
 
 end
