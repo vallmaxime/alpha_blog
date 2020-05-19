@@ -1,24 +1,7 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Pour accéder à mon site web, voici le lien ci-dessous :
 
-Things you may want to cover:
+https://alpha-blog-trainnig-test.herokuapp.com/
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Inscrit toi, et laisse un message pour me dire ce que tu en penses, ou ce qui pourrais etre modifier =) !
